@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">SampleForBlog</string>
+    <string name="app_name">示例代码</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="main_data">
+        <item>Style</item>
+        <item>Handler</item>
+        <item>Coordinator Layout</item>
+    </string-array>
 </resources>
