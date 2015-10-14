@@ -45,6 +45,11 @@ public class ItemSelectFragment extends BaseFragment<ItemSelectFragment> {
     }
 
     @Override
+    public void initDdata() {
+
+    }
+
+    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }

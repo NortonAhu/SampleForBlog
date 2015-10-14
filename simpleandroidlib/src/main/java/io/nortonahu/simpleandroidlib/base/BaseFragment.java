@@ -1,5 +1,6 @@
 package io.nortonahu.simpleandroidlib.base;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 /**
@@ -13,8 +14,15 @@ import android.support.v4.app.Fragment;
  * Why & What is modified:
  */
 public abstract class BaseFragment < T extends Fragment> extends Fragment {
-//    public static T newInstance(){
-//     return T;
-//    }
+
+    protected String mTitle = "";
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initDdata();
+    }
+
+    public abstract void initDdata();
 
 }
