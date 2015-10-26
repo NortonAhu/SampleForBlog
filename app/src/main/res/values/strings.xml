@@ -3,9 +3,10 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="main_data">
+        <item>Fragment</item>
+        <item>Coordinator Layout</item>
+        <item>Animator</item>
         <item>Style</item>
         <item>Handler</item>
-        <item>Coordinator Layout</item>
-        <item>Fragment</item>
     </string-array>
 </resources>

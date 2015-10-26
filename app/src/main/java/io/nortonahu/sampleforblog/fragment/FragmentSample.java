@@ -21,7 +21,7 @@ import io.nortonahu.simpleandroidlib.base.BaseFragment;
  * Author:    Hong Yu
  * Version    V1.0
  * Date:      2015/10/14 16:06.
- * Description:
+ * Description: 学习Fragment操作
  * Modification  History:
  * Date         	Author        		Version        	Description
  * -----------------------------------------------------------------------------------

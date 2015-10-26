@@ -3,14 +3,18 @@ package io.nortonahu.sampleforblog.ui;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.lang.ref.WeakReference;
+
 import io.nortonahu.sampleforblog.R;
-import io.nortonahu.sampleforblog.fragment.FragmentSample;
+import io.nortonahu.sampleforblog.module.FragementTest1;
 
 /**
  * Author:    Hong Yu
@@ -24,6 +28,7 @@ import io.nortonahu.sampleforblog.fragment.FragmentSample;
  */
 public class ContainActivity extends AppCompatActivity {
 
+    protected WeakReference<Fragment> mFragment;
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
@@ -42,11 +47,12 @@ public class ContainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
-            FragmentSample fragmentSample = FragmentSample.newInstance();
+            FragementTest1 fragmentSample = FragementTest1.newInstance();
             fragmentSample.setArguments(getIntent().getExtras());
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, fragmentSample)
-                    .commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, fragmentSample);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 

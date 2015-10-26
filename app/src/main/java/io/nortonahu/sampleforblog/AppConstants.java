@@ -13,4 +13,21 @@ package io.nortonahu.sampleforblog;
 public class AppConstants {
 
     public static final String KEY_TITLE_CONTENT = "title";
+
+    /**
+     *  item Fragment
+     */
+    public static final int KEY_ITEMSELECT = 0x0001;
+
+    /**
+     * sample
+     */
+    public static final int KEY_FRAGMENTSAMPLE = 0x0002;
+
+    public static final int KEY_FRAGMENTTEST1 = 0x0003;
+
+    public static final int KEY_FRAGMENTTEST2 = 0x0004;
+
+
+    public static final String KEY_PAGE_VALUE = "";
 }
